@@ -24,6 +24,6 @@ jobs:
         kubectl apply -f k8s-node-app.yaml
     - name: Test service URLs
       run: |
-          kubectl wait --for=condition=Ready pod/devopshint/node-app:latest --timeout=90s
+          kubectl wait --for=condition=Ready pod/node-app:latest --timeout=90s
           minikube service list
           minikube service nodejs-app --url
